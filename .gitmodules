@@ -1,0 +1,3 @@
+[submodule "openlierox"]
+	path = openlierox
+	url = https://github.com/albertz/openlierox.git

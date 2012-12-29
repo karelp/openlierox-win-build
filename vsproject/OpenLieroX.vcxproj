@@ -1,0 +1,1373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>OpenLieroX</ProjectName>
+    <ProjectGuid>{EA0C2715-65F3-4238-AA7E-B3A92D706334}</ProjectGuid>
+    <RootNamespace>OpenLieroX</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.21006.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../openlierox/share/gamedir/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../openlierox/share/gamedir/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_debug</TargetName>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../deps/freealut/include;../openlierox/libs/hawknl/src;../openlierox/libs/hawknl/include;../deps/libcurl/include;../deps/libgd;../deps/libvorbis/include;../deps/libxml2/include;../deps/libzip/lib;../deps/openal/include/AL;../deps/openal/include;../deps/sdl/include;../deps/sdl_image;../deps/zlib/;../deps/boost;../deps/iconv/include;./iconv;../deps/libogg/include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Albert Zeyer\Programmierung\libxml2-2.7.8.win32\lib;C:\Users\Albert Zeyer\Programmierung\openal-soft-1.13\lib;C:\Program Files %28x86%29\boost\boost_1_47\lib;C:\Users\Albert Zeyer\Programmierung\SDL_image-1.2.12\lib\x86;C:\Users\Albert Zeyer\Programmierung\SDL-1.2.15\lib\x86;C:\Users\Albert Zeyer\Programmierung\libogg-1.3.0\libogg-1.3.0\win32\VS2010\Win32\Debug;C:\Users\Albert Zeyer\Programmierung\libcurl-7.19.3-win32-ssl-msvc\lib\Debug;C:\Users\Albert Zeyer\Programmierung\zlib-1.2.3-lib\lib;C:\Users\Albert Zeyer\Programmierung\libvorbis-1.3.2\libvorbis-1.3.2\win32\VS2010\Win32\Debug;C:\Users\Albert Zeyer\Programmierung\freealut-1.1.0-bin\lib;C:\Users\Albert Zeyer\Programmierung\gd-2.0.33-1-lib\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../deps/freealut/include;../openlierox/libs/hawknl/src;../openlierox/libs/hawknl/include;../deps/libcurl/include;../deps/libgd;../deps/libvorbis/include;../deps/libxml2/include;../deps/libzip/lib;../deps/openal/include/AL;../deps/openal/include;../deps/sdl/include;../deps/sdl_image;../deps/zlib/;../deps/boost;../deps/iconv/include;./iconv;../deps/libogg/include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Albert Zeyer\Programmierung\libxml2-2.7.8.win32\lib;C:\Users\Albert Zeyer\Programmierung\openal-soft-1.13\lib;C:\Program Files %28x86%29\boost\boost_1_47\lib;C:\Users\Albert Zeyer\Programmierung\SDL_image-1.2.12\lib\x86;C:\Users\Albert Zeyer\Programmierung\SDL-1.2.15\lib\x86;C:\Users\Albert Zeyer\Programmierung\libogg-1.3.0\libogg-1.3.0\win32\VS2010\Win32\Debug;C:\Users\Albert Zeyer\Programmierung\libcurl-7.19.3-win32-ssl-msvc\lib\Debug;C:\Users\Albert Zeyer\Programmierung\zlib-1.2.3-lib\lib;C:\Users\Albert Zeyer\Programmierung\libvorbis-1.3.2\libvorbis-1.3.2\win32\VS2010\Win32\Debug;C:\Users\Albert Zeyer\Programmierung\freealut-1.1.0-bin\lib;C:\Users\Albert Zeyer\Programmierung\gd-2.0.33-1-lib\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../../share/gamedir/Game.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\openlierox\optional-includes\generated;..\openlierox\include;../../deps/hawknl/src/;..\openlierox\libs\boost_process;..\openlierox\libs\libzip;..\openlierox\src\breakpad\external\src;../openlierox/src/;..\openlierox\libs\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;USE_DEFAULT_MSC_DELEAKER;HAVE_BOOST;ZLIB_WIN32_NODLL;NBREAKPAD;NONDLL;BOOST_NO_STATIC_ASSERT;BOOST_NO_CXX11_STATIC_ASSERT;BOOST_AUTO_LINK_NOMANGLE;CURL_STATICLIB;ALUT_BUILD_LIBRARY;LIBXML_STATIC;WIN_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\obj/Debug_ded/Game.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\obj/Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\obj/Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>..\openlierox\bin\</ProgramDataBaseFileName>
+      <BrowseInformation>
+      </BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4355;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c09</Culture>
+      <AdditionalIncludeDirectories>../openlierox/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Imagehlp.lib;wsock32.lib;ws2_32.lib;wininet.lib;$(VSInstallDir)\DIA SDK\lib\diaguids.lib;winmm.lib;wldap32.lib;dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../openlierox/share/gamedir/OpenLieroX_debug.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>LIBC;msvcrt.lib;LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\../../bin/OpenLieroX_debug.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>obj/debug/Game.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../../share/gamedir/Game.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\openlierox\optional-includes\generated;..\openlierox\include;../../deps/hawknl/src/;..\openlierox\libs\boost_process;..\openlierox\libs\libzip;..\openlierox\src\breakpad\external\src;../openlierox/src/;..\openlierox\libs\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;HAVE_BOOST;ZLIB_WIN32_NODLL;BOOST_NO_STATIC_ASSERT;NBREAKPAD;NONDLL;BOOST_NO_CXX11_STATIC_ASSERT;BOOST_AUTO_LINK_NOMANGLE;CURL_STATICLIB;ALUT_BUILD_LIBRARY;LIBXML_STATIC;WIN_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\obj/Release/Game.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\obj/Release/</AssemblerListingLocation>
+      <ObjectFileName>.\obj/Release/</ObjectFileName>
+      <ProgramDataBaseFileName>..\openlierox\bin\</ProgramDataBaseFileName>
+      <BrowseInformation>
+      </BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c09</Culture>
+      <AdditionalIncludeDirectories>../openlierox/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Imagehlp.lib;wsock32.lib;wininet.lib;$(VSInstallDir)\DIA SDK\lib\diaguids.lib;winmm.lib;dbghelp.lib;ws2_32.lib;wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../openlierox/share/gamedir/OpenLieroX.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>LIBC;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\../../bin/OpenLieroX.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>..\openlierox\bin\OpenLieroX.map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>obj/debug/Game.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="boost_chrono\boost_chrono.vcxproj">
+      <Project>{f8450ed8-a226-41f2-9cb4-959847e9b4a5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="boost_date_time\boost_date_time.vcxproj">
+      <Project>{aafaf613-c2d7-4f6e-8a67-26dfdc0598d3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="boost_signals\boost_signals.vcxproj">
+      <Project>{8a2e0d6c-7a48-4d61-b044-c9cf30646520}</Project>
+    </ProjectReference>
+    <ProjectReference Include="boost_system\boost_system.vcxproj">
+      <Project>{faedb4e7-1e90-49d9-8080-3ee5865310f3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="boost_thread\boost_thread.vcxproj">
+      <Project>{5adc34be-5115-420d-86f6-5a858705a020}</Project>
+    </ProjectReference>
+    <ProjectReference Include="freealut\freealut.vcxproj">
+      <Project>{601a7e93-5041-4408-bef6-184eb83a7850}</Project>
+    </ProjectReference>
+    <ProjectReference Include="freetype\freetype.vcxproj">
+      <Project>{1403ec7d-02de-4381-97dd-4f291e5c7390}</Project>
+    </ProjectReference>
+    <ProjectReference Include="hawknl\hawknl.vcxproj">
+      <Project>{c34c088a-bc74-4373-a6d9-116f5ea47bcc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="iconv\iconv.vcxproj">
+      <Project>{cf537577-1a9f-4435-8597-cead62138a49}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libcurl\libcurl.vcxproj">
+      <Project>{285cb970-f562-4aef-9fbc-0b13fb051e01}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgd\libgd.vcxproj">
+      <Project>{b03f010f-9ed7-43ef-b90c-4c6eb0de0643}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libjpeg\libjpeg.vcxproj">
+      <Project>{19c29662-b900-4ea8-9943-3871b193104e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libogg\libogg.vcxproj">
+      <Project>{f692de5e-60d6-486a-abc6-310edd0f63ee}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libpng\libpng.vcxproj">
+      <Project>{45513a45-ef4d-4cdb-b304-4da7bd82220f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libvorbis\libvorbis.vcxproj">
+      <Project>{8805e585-38b8-4d94-b24e-fb204c446de7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libxml2\libxml2.vcxproj">
+      <Project>{45f8ceec-1bee-429a-bc74-b00058deb040}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libzip\libzip.vcxproj">
+      <Project>{6621345a-b291-4425-8eac-53626dd0a5fe}</Project>
+    </ProjectReference>
+    <ProjectReference Include="lua\Lua.vcxproj">
+      <Project>{f9c7b86a-c5f0-4bb0-acfe-6e5ad9616436}</Project>
+    </ProjectReference>
+    <ProjectReference Include="openal\openal.vcxproj">
+      <Project>{43cb0e00-42f6-40aa-895a-c4eebb9548aa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="sdlmain\sdlmain.vcxproj">
+      <Project>{ad1c832e-9e69-4efe-8e29-6ef88cad4385}</Project>
+    </ProjectReference>
+    <ProjectReference Include="sdl\sdl.vcxproj">
+      <Project>{dd249f69-907f-4c83-8508-07bee50b44ae}</Project>
+    </ProjectReference>
+    <ProjectReference Include="sdl_image\sdl_image.vcxproj">
+      <Project>{9b5404b4-642e-4d0b-a01a-be5a30e3bf8d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="zlib\zlib.vcxproj">
+      <Project>{75bee870-84f2-465d-a30e-88e153007a20}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\openlierox\include\Autocompletion.h" />
+    <ClInclude Include="..\openlierox\include\AuxLib.h" />
+    <ClInclude Include="..\openlierox\include\Cache.h" />
+    <ClInclude Include="..\openlierox\include\CBytestream.h" />
+    <ClInclude Include="..\openlierox\include\CChannel.h" />
+    <ClInclude Include="..\openlierox\include\CFont.h" />
+    <ClInclude Include="..\openlierox\include\CInput.h" />
+    <ClInclude Include="..\openlierox\include\Clipboard.h" />
+    <ClInclude Include="..\openlierox\include\Color.h" />
+    <ClInclude Include="..\openlierox\include\Condition.h" />
+    <ClInclude Include="..\openlierox\include\ConversationLogger.h" />
+    <ClInclude Include="..\openlierox\include\CssParser.h" />
+    <ClInclude Include="..\openlierox\include\CsvReader.h" />
+    <ClInclude Include="..\openlierox\include\Cursor.h" />
+    <ClInclude Include="..\openlierox\include\CVec.h" />
+    <ClInclude Include="..\openlierox\include\Debug.h" />
+    <ClInclude Include="..\openlierox\include\DynDraw.h" />
+    <ClInclude Include="..\openlierox\include\Error.h" />
+    <ClInclude Include="..\openlierox\include\EventQueue.h" />
+    <ClInclude Include="..\openlierox\include\FastVector.h" />
+    <ClInclude Include="..\openlierox\include\FindFile.h" />
+    <ClInclude Include="..\openlierox\include\GeoIPDatabase.h" />
+    <ClInclude Include="..\openlierox\include\Geometry.h" />
+    <ClInclude Include="..\openlierox\include\GfxPrimitives.h" />
+    <ClInclude Include="..\openlierox\include\IniReader.h" />
+    <ClInclude Include="..\openlierox\include\InputEvents.h" />
+    <ClInclude Include="..\openlierox\include\IpToCountryDB.h" />
+    <ClInclude Include="..\openlierox\include\IRC.h" />
+    <ClInclude Include="..\openlierox\include\MathLib.h" />
+    <ClInclude Include="..\openlierox\include\Music.h" />
+    <ClInclude Include="..\openlierox\include\Mutex.h" />
+    <ClInclude Include="..\openlierox\include\NewNetEngine.h" />
+    <ClInclude Include="..\openlierox\include\PixelFunctors.h" />
+    <ClInclude Include="..\openlierox\include\Process.h" />
+    <ClInclude Include="..\openlierox\include\RandomNumberList.h" />
+    <ClInclude Include="..\openlierox\include\ReadWriteLock.h" />
+    <ClInclude Include="..\openlierox\include\sex.h" />
+    <ClInclude Include="..\openlierox\include\SmartPointer.h" />
+    <ClInclude Include="..\openlierox\include\StackWalker.h" />
+    <ClInclude Include="..\openlierox\include\StringBuf.h" />
+    <ClInclude Include="..\openlierox\include\StringUtils.h" />
+    <ClInclude Include="..\openlierox\include\StyleVar.h" />
+    <ClInclude Include="..\openlierox\include\TaskManager.h" />
+    <ClInclude Include="..\openlierox\include\ThreadPool.h" />
+    <ClInclude Include="..\openlierox\include\ThreadVar.h" />
+    <ClInclude Include="..\openlierox\include\Timer.h" />
+    <ClInclude Include="..\openlierox\include\types.h" />
+    <ClInclude Include="..\openlierox\include\UCString.h" />
+    <ClInclude Include="..\openlierox\include\Unicode.h" />
+    <ClInclude Include="..\openlierox\include\win32memleakdebug.h" />
+    <ClInclude Include="..\openlierox\include\XMLutils.h" />
+    <ClInclude Include="..\openlierox\src\cfg\client.h" />
+    <ClInclude Include="..\openlierox\src\client\ClientConnectionRequestInfo.h" />
+    <ClInclude Include="..\openlierox\src\client\gfx\raytracing.h" />
+    <ClInclude Include="..\openlierox\src\client\StdinCLISupport.h" />
+    <ClInclude Include="..\openlierox\src\common\MapLoader_common.h" />
+    <ClInclude Include="..\openlierox\src\game\Attr.h" />
+    <ClInclude Include="..\openlierox\src\game\CGameObject.h" />
+    <ClInclude Include="..\openlierox\src\game\ClassInfo.h" />
+    <ClInclude Include="..\openlierox\src\game\CMap.h" />
+    <ClInclude Include="..\openlierox\src\game\CWorm.h" />
+    <ClInclude Include="..\openlierox\src\game\EngineSettings.h" />
+    <ClInclude Include="..\openlierox\src\game\GameMode.h" />
+    <ClInclude Include="..\openlierox\src\game\GameState.h" />
+    <ClInclude Include="..\openlierox\src\game\ServerList.h" />
+    <ClInclude Include="..\openlierox\src\game\Settings.h" />
+    <ClInclude Include="..\openlierox\src\game\SettingsPreset.h" />
+    <ClInclude Include="..\openlierox\src\game\Sounds.h" />
+    <ClInclude Include="..\openlierox\src\gui\List.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\luaapi\classes.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\luaapi\context.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\luaapi\macros.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\luaapi\types.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\LuaCallbacks.h" />
+    <ClInclude Include="..\openlierox\src\MainLoop.h" />
+    <ClInclude Include="..\openlierox\src\sound\sfx.h" />
+    <ClInclude Include="..\openlierox\src\sound\sfxdriver.h" />
+    <ClInclude Include="..\openlierox\src\sound\sfxdriver_openal.h" />
+    <ClInclude Include="..\openlierox\src\sound\SoundsBase.h" />
+    <ClInclude Include="..\openlierox\src\sound\sound_sample.h" />
+    <ClInclude Include="..\openlierox\src\sound\sound_sample_openal.h" />
+    <ClInclude Include="..\openlierox\src\util\angle.h" />
+    <ClInclude Include="..\openlierox\src\util\BaseObject.h" />
+    <ClInclude Include="..\openlierox\src\util\bitarray.h" />
+    <ClInclude Include="..\openlierox\src\util\Bitstream.h" />
+    <ClInclude Include="..\openlierox\src\util\common.h" />
+    <ClInclude Include="..\openlierox\src\util\compare.h" />
+    <ClInclude Include="..\openlierox\src\util\CustomVar.h" />
+    <ClInclude Include="..\openlierox\src\util\FixedPointNumber.h" />
+    <ClInclude Include="..\openlierox\src\util\GusCache.h" />
+    <ClInclude Include="..\openlierox\src\util\IPrintOutFct.h" />
+    <ClInclude Include="..\openlierox\src\util\List.h" />
+    <ClInclude Include="..\openlierox\src\util\log.h" />
+    <ClInclude Include="..\openlierox\src\util\macros.h" />
+    <ClInclude Include="..\openlierox\src\util\math_func.h" />
+    <ClInclude Include="..\openlierox\src\util\PODForClass.h" />
+    <ClInclude Include="..\openlierox\src\util\Random.h" />
+    <ClInclude Include="..\openlierox\src\util\rect.h" />
+    <ClInclude Include="..\openlierox\src\util\Result.h" />
+    <ClInclude Include="..\openlierox\src\util\StaticVar.h" />
+    <ClInclude Include="..\openlierox\src\util\stringbuild.h" />
+    <ClInclude Include="..\openlierox\src\util\StringConv.h" />
+    <ClInclude Include="..\openlierox\src\util\text.h" />
+    <ClInclude Include="..\openlierox\src\util\trace.h" />
+    <ClInclude Include="..\openlierox\include\CBanList.h" />
+    <ClInclude Include="..\openlierox\include\CBonus.h" />
+    <ClInclude Include="..\openlierox\include\CChatBox.h" />
+    <ClInclude Include="..\openlierox\include\CClient.h" />
+    <ClInclude Include="..\openlierox\include\CGameScript.h" />
+    <ClInclude Include="..\openlierox\include\CGameSkin.h" />
+    <ClInclude Include="..\openlierox\include\ChatCommand.h" />
+    <ClInclude Include="..\openlierox\include\CMap.h" />
+    <ClInclude Include="..\openlierox\include\CNinjaRope.h" />
+    <ClInclude Include="..\openlierox\include\CProjectile.h" />
+    <ClInclude Include="..\openlierox\include\CServer.h" />
+    <ClInclude Include="..\openlierox\include\CShootList.h" />
+    <ClInclude Include="..\openlierox\include\CViewport.h" />
+    <ClInclude Include="..\openlierox\include\CWeather.h" />
+    <ClInclude Include="..\openlierox\include\CWorm.h" />
+    <ClInclude Include="..\openlierox\include\CWormBot.h" />
+    <ClInclude Include="..\openlierox\include\CWpnRest.h" />
+    <ClInclude Include="..\openlierox\include\DedicatedControl.h" />
+    <ClInclude Include="..\openlierox\include\Entity.h" />
+    <ClInclude Include="..\openlierox\include\FlagInfo.h" />
+    <ClInclude Include="..\openlierox\src\game\Game.h" />
+    <ClInclude Include="..\openlierox\src\game\Level.h" />
+    <ClInclude Include="..\openlierox\src\game\Mod.h" />
+    <ClInclude Include="..\openlierox\include\Physics.h" />
+    <ClInclude Include="..\openlierox\include\PhysicsLX56.h" />
+    <ClInclude Include="..\openlierox\include\ProfileSystem.h" />
+    <ClInclude Include="..\openlierox\include\ProjAction.h" />
+    <ClInclude Include="..\openlierox\include\Protocol.h" />
+    <ClInclude Include="..\openlierox\src\game\SinglePlayer.h" />
+    <ClInclude Include="..\openlierox\src\game\WormInputHandler.h" />
+    <ClInclude Include="..\openlierox\include\CGameMode.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CAnimation.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CBar.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CBox.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CBrowser.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CButton.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CChatWidget.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CCheckbox.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CCombobox.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CGuiLayout.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CGuiSkin.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CGuiSkinnedLayout.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CImage.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CInputBox.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CLabel.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CLine.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CListview.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CMenu.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CProgressbar.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CScrollbar.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CSlider.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CTextbox.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CTextButton.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CTitleButton.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CWidget.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CWidgetList.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\Graphics.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\Menu.h" />
+    <ClInclude Include="..\openlierox\src\util\VecTimeRecorder.h" />
+    <ClInclude Include="..\openlierox\src\util\WeakRef.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\openlierox\include\con_cmd.h" />
+    <ClInclude Include="..\openlierox\include\Console.h" />
+    <ClInclude Include="..\openlierox\include\CScriptableVars.h" />
+    <ClInclude Include="..\openlierox\include\FeatureList.h" />
+    <ClInclude Include="..\openlierox\include\FileDownload.h" />
+    <ClInclude Include="..\openlierox\include\HTTP.h" />
+    <ClInclude Include="..\openlierox\include\LieroX.h" />
+    <ClInclude Include="..\openlierox\include\Networking.h" />
+    <ClInclude Include="..\openlierox\include\Options.h" />
+    <ClInclude Include="..\openlierox\include\UploadSpeedTest.h" />
+    <ClInclude Include="..\openlierox\include\Utils.h" />
+    <ClInclude Include="..\openlierox\include\Version.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CAnimation.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CBackground.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CBar.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CBorder.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CBox.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CBrowser.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CButton.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CCheckbox.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CCombobox.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CDialog.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CGuiSkin.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CGuiSkinnedLayout.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CImage.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CImageButton.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CInputBox.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CItem.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CLabel.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CLine.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CListview.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CMapEditor.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CMarquee.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CMenu.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CMinimap.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CommonDialogs.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CProgressbar.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CScrollbar.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CSlider.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CTabControl.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CTextbox.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CTextButton.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CTitleButton.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CToggleButton.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CWidget.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CWidgetEffect.h" />
+    <ClInclude Include="..\openlierox\include\FontHandling.h" />
+    <ClInclude Include="..\openlierox\include\GuiPrimitives.h" />
+    <ClInclude Include="..\openlierox\src\breakpad\BreakPad.h" />
+    <ClInclude Include="..\openlierox\src\breakpad\BreakpadDllExportMacro.h" />
+    <ClInclude Include="..\openlierox\src\breakpad\config.h" />
+    <ClInclude Include="..\openlierox\src\breakpad\DumpSyms.h" />
+    <ClInclude Include="..\openlierox\src\breakpad\ExtractInfo.h" />
+    <ClInclude Include="..\openlierox\src\breakpad\on_demand_symbol_supplier.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\2xsai.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\allegro.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\animators.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\base_action.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\base_animator.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\client.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\culling.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\detect_event.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\distortion.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\encoding.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\events.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\exp_type.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\explosion.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\font.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\game_actions.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gconsole.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gfx.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\glua.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gusanos.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gusgame.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\hash_table.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\level.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\level_effect.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\material.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\menu.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\message_queue.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\net_worm.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\netstream.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\network.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\ninjarope.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\noise_line.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\object_grid.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\objects_list.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\parser.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\part_type.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\particle.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\player_input.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\posspd_replicator.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\proxy_player.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\resource_base.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\resource_list.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\resource_locator.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\script.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\server.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\simple_particle.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\sound.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\sprite.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\sprite_set.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\stl_str_replicator.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\timer_event.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\vector_replicator.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\weapon.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\weapon_type.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\blitters\blitters.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\blitters\colors.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\blitters\context.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\blitters\macros.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\blitters\mmx.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\blitters\types.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\alias.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\command.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\console-grammar.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\console.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\consoleitem.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\special_command.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\variables.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\omfggui.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\omfggui_windows.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\button.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\check.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\context.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\edit.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\group.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\gss-grammar.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\label.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\list.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\llist.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\renderer.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\wnd.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\xml-grammar.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\xml.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\lua\bindings-gui.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\loaders\liero.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\loaders\losp.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\loaders\vermes.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings-game.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings-gfx.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings-math.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings-network.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings-objects.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings-resources.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\omfgscript\omfg_script.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\omfgscript\omfg_script_parser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\openlierox\src\cfg\client.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/cfg_client.obj</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/client1.asm</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/client1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\AuxLib.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\Cache.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\ClientConnectionRequestInfo.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CLabel.cpp" />
+    <ClCompile Include="..\openlierox\src\client\gfx\raytracing.cpp" />
+    <ClCompile Include="..\openlierox\src\client\PixelFunctors.cpp" />
+    <ClCompile Include="..\openlierox\src\client\StdinCLISupport.cpp" />
+    <ClCompile Include="..\openlierox\src\common\CBytestream.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CChannel.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CFont.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CInput.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\Clipboard.cpp" />
+    <ClCompile Include="..\openlierox\src\common\ConfigHandler.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\ConversationLogger.cpp" />
+    <ClCompile Include="..\openlierox\src\common\CssParser.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\Cursor.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Debug.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DynDraw.cpp" />
+    <ClCompile Include="..\openlierox\src\client\Error.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Debug_AmIBeingDebugged.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Debug_DumpCallstack.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Debug_extended_backtrace.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Debug_GetCallstack.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Debug_GetPCFromUContext.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Debug_RaiseDebugger.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Debug_WriteCoreDump.cpp" />
+    <ClCompile Include="..\openlierox\src\common\EventQueue.cpp" />
+    <ClCompile Include="..\openlierox\src\common\FindFile.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\GeoIPDatabase.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Geometry.cpp" />
+    <ClCompile Include="..\openlierox\src\client\GfxPrimitives.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\GfxSaveSurface.cpp" />
+    <ClCompile Include="..\openlierox\src\client\GfxUtils.cpp" />
+    <ClCompile Include="..\openlierox\src\common\IniReader.cpp" />
+    <ClCompile Include="..\openlierox\src\client\InputEvents.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\IpToCountryDB.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\IRC.cpp" />
+    <ClCompile Include="..\openlierox\src\common\MapLoader_CommanderKeen123.cpp" />
+    <ClCompile Include="..\openlierox\src\common\MapLoader_Gusanos.cpp" />
+    <ClCompile Include="..\openlierox\src\common\MapLoader_LieroX.cpp" />
+    <ClCompile Include="..\openlierox\src\common\MapLoader_OrigLiero.cpp" />
+    <ClCompile Include="..\openlierox\src\common\MapLoader_Teeworlds.cpp" />
+    <ClCompile Include="..\openlierox\src\common\MathLib.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\Music.cpp" />
+    <ClCompile Include="..\openlierox\src\common\memstats.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Mutex.cpp" />
+    <ClCompile Include="..\openlierox\src\common\NewNetEngine.cpp" />
+    <ClCompile Include="..\openlierox\src\client\NotifyUser.cpp" />
+    <ClCompile Include="..\openlierox\src\client\OpenExternBrowser.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Process.cpp" />
+    <ClCompile Include="..\openlierox\src\common\sex.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\SmartPointer.cpp" />
+    <ClCompile Include="..\openlierox\src\common\SMTP.cpp" />
+    <ClCompile Include="..\openlierox\src\common\StackWalker.cpp" />
+    <ClCompile Include="..\openlierox\src\common\StringBuf.cpp" />
+    <ClCompile Include="..\openlierox\src\common\StringUtils.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\SystemFunctions.cpp" />
+    <ClCompile Include="..\openlierox\src\common\TaskManager.cpp" />
+    <ClCompile Include="..\openlierox\src\common\TeeStdoutHandler.cpp" />
+    <ClCompile Include="..\openlierox\src\common\ThreadPool.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Timer.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Unicode.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\XMLutils.cpp" />
+    <ClCompile Include="..\openlierox\src\game\Attr.cpp" />
+    <ClCompile Include="..\openlierox\src\game\ClassInfo.cpp" />
+    <ClCompile Include="..\openlierox\src\game\GameMode.cpp" />
+    <ClCompile Include="..\openlierox\src\game\GameState.cpp" />
+    <ClCompile Include="..\openlierox\src\game\Game_loadMap.cpp" />
+    <ClCompile Include="..\openlierox\src\game\Game_loadMod.cpp" />
+    <ClCompile Include="..\openlierox\src\game\Game_loadWeaponRestrictions.cpp" />
+    <ClCompile Include="..\openlierox\src\game\ServerList.cpp" />
+    <ClCompile Include="..\openlierox\src\game\Settings.cpp" />
+    <ClCompile Include="..\openlierox\src\game\SettingsPreset.cpp" />
+    <ClCompile Include="..\openlierox\src\game\Sounds.cpp" />
+    <ClCompile Include="..\openlierox\src\gui\List.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/guilist</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\luaapi\context.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/context_lua.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\LuaCallbacks.cpp" />
+    <ClCompile Include="..\openlierox\src\MainLoop.cpp" />
+    <ClCompile Include="..\openlierox\src\sound\sfx.cpp" />
+    <ClCompile Include="..\openlierox\src\sound\sfxdriver.cpp" />
+    <ClCompile Include="..\openlierox\src\sound\sfxdriver_openal.cpp" />
+    <ClCompile Include="..\openlierox\src\sound\Sounds.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/Sounds_src.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/Sounds_src.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\sound\sound_sample_openal.cpp" />
+    <ClCompile Include="..\openlierox\src\util\angle.cpp" />
+    <ClCompile Include="..\openlierox\src\util\BaseObject.cpp" />
+    <ClCompile Include="..\openlierox\src\util\Bitstream.cpp" />
+    <ClCompile Include="..\openlierox\src\util\CustomVar.cpp" />
+    <ClCompile Include="..\openlierox\src\util\List.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/util_DynamicList</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/util_DynamicList</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\util\log.cpp" />
+    <ClCompile Include="..\openlierox\src\util\math_func.cpp" />
+    <ClCompile Include="..\openlierox\src\util\StringConv.cpp" />
+    <ClCompile Include="..\openlierox\src\util\text.cpp" />
+    <ClCompile Include="..\openlierox\src\server\CBanList.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CBonus.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CChatBox.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CClient.cpp" />
+    <ClCompile Include="..\openlierox\src\client\CClient_Draw.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CClient_Game.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CClient_Parse.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CClient_Send.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CGameObject.cpp" />
+    <ClCompile Include="..\openlierox\src\common\CGameScript.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CGameSkin.cpp" />
+    <ClCompile Include="..\openlierox\src\server\ChatCommand.cpp" />
+    <ClCompile Include="..\openlierox\src\common\CMap.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CNinjaRope.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CProjectile.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CServer.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CServer_Game.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CServer_Parse.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CServer_Send.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CServerConnection.cpp" />
+    <ClCompile Include="..\openlierox\src\common\CShootList.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CViewport.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CWeather.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CWorm.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CWorm_SendRecv.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CWormBot.cpp" />
+    <ClCompile Include="..\openlierox\src\common\CWormHuman.cpp" />
+    <ClCompile Include="..\openlierox\src\common\CWpnRest.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\DedicatedControl.cpp" />
+    <ClCompile Include="..\openlierox\src\client\Entity.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\FlagInfo.cpp" />
+    <ClCompile Include="..\openlierox\src\game\Game.cpp" />
+    <ClCompile Include="..\openlierox\src\game\Level.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\MapLoader.cpp" />
+    <ClCompile Include="..\openlierox\src\game\Mod.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Physics.cpp" />
+    <ClCompile Include="..\openlierox\src\common\PhysicsLX56.cpp" />
+    <ClCompile Include="..\openlierox\src\common\PhysicsLX56_Projectiles.cpp" />
+    <ClCompile Include="..\openlierox\src\client\ProfileSystem.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\SinglePlayer.cpp" />
+    <ClCompile Include="..\openlierox\src\game\WormInputHandler.cpp" />
+    <ClCompile Include="..\openlierox\src\server\CaptureTheFlag.cpp" />
+    <ClCompile Include="..\openlierox\src\server\CDeathMatch.cpp" />
+    <ClCompile Include="..\openlierox\src\server\CDemolitionsMatch.cpp" />
+    <ClCompile Include="..\openlierox\src\server\CGameMode.cpp" />
+    <ClCompile Include="..\openlierox\src\server\CHideAndSeek.cpp" />
+    <ClCompile Include="..\openlierox\src\server\CRace.cpp" />
+    <ClCompile Include="..\openlierox\src\server\CTag.cpp" />
+    <ClCompile Include="..\openlierox\src\server\CTeamDeathMatch.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CAnimation.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CBar.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CBox.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CBrowser.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CButton.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CChatWidget.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CCheckbox.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CCombobox.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CGuiLayout.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CGuiSkin.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CGuiSkinnedLayout.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CImage.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CInputBox.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CListview.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CMenu.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CScrollbar.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CSlider.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CTextbox.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CTextButton.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CTitleButton.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CWidget.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CWidgetList.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Graphics.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_FloatingOptions.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Local.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Main.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Mapeditor.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Chat.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Favourites.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Host.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Internet.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Join.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Lan.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Main.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_News.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Options.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Player.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_SpeedTest.cpp" />
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\MenuSystem.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Command.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Console.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CrashHandler.cpp" />
+    <ClCompile Include="..\openlierox\src\common\CScriptableVars.cpp" />
+    <ClCompile Include="..\openlierox\src\common\FeatureList.cpp" />
+    <ClCompile Include="..\openlierox\src\common\FileDownload.cpp" />
+    <ClCompile Include="..\openlierox\src\common\HTTP.cpp" />
+    <ClCompile Include="..\openlierox\src\main.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\MainGlobals.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Misc.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Networking.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4996;4355;4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4005</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\Options.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\UploadSpeedTest.cpp" />
+    <ClCompile Include="..\openlierox\src\common\Version.cpp" />
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CAnimation.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CBackground.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CBorder.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CButton.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CCheckbox.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CCombobox.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CDialog.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CGuiSkin.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CGuiSkinnedLayout.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CImage.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CImageButton.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CInputBox.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CItem.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CLabel.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CLine.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CListview.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CMapEditor.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CMarquee.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CMenu.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CMinimap.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CommonDialogs.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CProgressbar.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CScrollbar.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CSlider.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CTabControl.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CTextbox.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CToggleButton.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CWidget.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\FontHandling.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\GuiPrimitives.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/SkinnedGUI/</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/SkinnedGUI/</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\breakpad\BreakPad.cpp" />
+    <ClCompile Include="..\openlierox\src\breakpad\DumpSyms.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IncludePath);../../optional-includes/generated;../../include;../../libs/hawknl/include;../../libs/hawknl/src;../../libs/boost_process;../../libs/libzip;../../libs/lua;../../src/breakpad/external/src;../../src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IncludePath);..\openlierox\optional-includes\generated;..\openlierox\include;../../libs/hawknl/src/;..\openlierox\libs\boost_process;..\openlierox\libs\libzip;..\openlierox\src\breakpad\external\src;../../src/;..\openlierox\libs\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\breakpad\ExtractInfo.cpp" />
+    <ClCompile Include="..\openlierox\src\breakpad\on_demand_symbol_supplier.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\2xsai.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\allegro.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\animators.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\base_action.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\base_animator.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\base_worm.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\client.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/gus_client.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\culling.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\detect_event.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\distortion.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\encoding.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\events.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\exp_type.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\explosion.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\font.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\game_actions.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gconsole.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gfx.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\glua.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gusanos.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gusgame.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\hash_table.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\level.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\level_effect.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\material.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\menu.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\net_worm.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\netstream.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\network.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\ninjarope.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\noise_line.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\object_grid.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\objects_list.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\parser.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\part_type.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\particle.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\player_input.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\posspd_replicator.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\proxy_player.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\resource_base.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\resource_list.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\resource_locator.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\script.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\server.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\simple_particle.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\sound.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\sprite.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\sprite_set.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\stl_str_replicator.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\timer_event.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\vector_replicator.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\viewport.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\weapon.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\weapon_type.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\blitters\add.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\blitters\add_simd.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\blitters\blend.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\blitters\blend_simd.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\blitters\mult.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\blitters\mult_simd.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\console\alias.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\console\command.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\console\console.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\console\consoleitem.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\console\special_command.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\console\variables.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\button.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\check.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\context.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/detail_context.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\edit.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\group.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\gss.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\label.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\list.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/list_gus.asm</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj/Debug/list_gus.obj</ObjectFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/list_gus.asm</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj/Release/list_gus.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\renderer.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\wnd.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\xml.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\gui\lua\bindings-gui.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\loaders\liero.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\loaders\losp.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\loaders\vermes.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings-game.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings-gfx.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings-math.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings-network.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings-objects.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings-resources.cpp" />
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(FileName)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\omfgscript\omfg_script.cpp" />
+    <ClCompile Include="..\openlierox\src\util\VecTimeRecorder.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\openlierox\share\OpenLieroX.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

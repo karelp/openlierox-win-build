@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{45F8CEEC-1BEE-429A-BC74-B00058DEB040}</ProjectGuid>
+    <RootNamespace>libxml2</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../deps/libxml2/win32/VC10;../../deps/libxml2/include;../iconv;../../deps/iconv/include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;LIBXML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>@echo off
+echo **************************************
+echo *         Compiling LIBXML2          *
+echo **************************************</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../../deps/libxml2/win32/VC10;../../deps/libxml2/include;../iconv;../../deps/iconv/include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;LIBXML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>@echo off
+echo **************************************
+echo *         Compiling LIBXML2          *
+echo **************************************</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\deps\libxml2\buf.c" />
+    <ClCompile Include="..\..\deps\libxml2\c14n.c" />
+    <ClCompile Include="..\..\deps\libxml2\catalog.c" />
+    <ClCompile Include="..\..\deps\libxml2\chvalid.c" />
+    <ClCompile Include="..\..\deps\libxml2\debugXML.c" />
+    <ClCompile Include="..\..\deps\libxml2\dict.c" />
+    <ClCompile Include="..\..\deps\libxml2\DOCBparser.c" />
+    <ClCompile Include="..\..\deps\libxml2\encoding.c" />
+    <ClCompile Include="..\..\deps\libxml2\entities.c" />
+    <ClCompile Include="..\..\deps\libxml2\error.c" />
+    <ClCompile Include="..\..\deps\libxml2\globals.c" />
+    <ClCompile Include="..\..\deps\libxml2\hash.c" />
+    <ClCompile Include="..\..\deps\libxml2\HTMLparser.c" />
+    <ClCompile Include="..\..\deps\libxml2\HTMLtree.c" />
+    <ClCompile Include="..\..\deps\libxml2\legacy.c" />
+    <ClCompile Include="..\..\deps\libxml2\list.c" />
+    <ClCompile Include="..\..\deps\libxml2\nanoftp.c" />
+    <ClCompile Include="..\..\deps\libxml2\nanohttp.c" />
+    <ClCompile Include="..\..\deps\libxml2\parser.c" />
+    <ClCompile Include="..\..\deps\libxml2\parserInternals.c" />
+    <ClCompile Include="..\..\deps\libxml2\pattern.c" />
+    <ClCompile Include="..\..\deps\libxml2\relaxng.c" />
+    <ClCompile Include="..\..\deps\libxml2\SAX.c" />
+    <ClCompile Include="..\..\deps\libxml2\SAX2.c" />
+    <ClCompile Include="..\..\deps\libxml2\schematron.c" />
+    <ClCompile Include="..\..\deps\libxml2\threads.c" />
+    <ClCompile Include="..\..\deps\libxml2\tree.c" />
+    <ClCompile Include="..\..\deps\libxml2\trio.c" />
+    <ClCompile Include="..\..\deps\libxml2\trionan.c" />
+    <ClCompile Include="..\..\deps\libxml2\triostr.c" />
+    <ClCompile Include="..\..\deps\libxml2\uri.c" />
+    <ClCompile Include="..\..\deps\libxml2\valid.c" />
+    <ClCompile Include="..\..\deps\libxml2\xinclude.c" />
+    <ClCompile Include="..\..\deps\libxml2\xlink.c" />
+    <ClCompile Include="..\..\deps\libxml2\xmlIO.c" />
+    <ClCompile Include="..\..\deps\libxml2\xmlmemory.c" />
+    <ClCompile Include="..\..\deps\libxml2\xmlmodule.c" />
+    <ClCompile Include="..\..\deps\libxml2\xmlreader.c" />
+    <ClCompile Include="..\..\deps\libxml2\xmlregexp.c" />
+    <ClCompile Include="..\..\deps\libxml2\xmlsave.c" />
+    <ClCompile Include="..\..\deps\libxml2\xmlschemas.c" />
+    <ClCompile Include="..\..\deps\libxml2\xmlschemastypes.c" />
+    <ClCompile Include="..\..\deps\libxml2\xmlstring.c" />
+    <ClCompile Include="..\..\deps\libxml2\xmlunicode.c" />
+    <ClCompile Include="..\..\deps\libxml2\xmlwriter.c" />
+    <ClCompile Include="..\..\deps\libxml2\xpath.c" />
+    <ClCompile Include="..\..\deps\libxml2\xpointer.c" />
+    <ClCompile Include="..\..\deps\libxml2\xzlib.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\deps\libxml2\buf.h" />
+    <ClInclude Include="..\..\deps\libxml2\elfgcchack.h" />
+    <ClInclude Include="..\..\deps\libxml2\enc.h" />
+    <ClInclude Include="..\..\deps\libxml2\libxml.h" />
+    <ClInclude Include="..\..\deps\libxml2\save.h" />
+    <ClInclude Include="..\..\deps\libxml2\timsort.h" />
+    <ClInclude Include="..\..\deps\libxml2\trio.h" />
+    <ClInclude Include="..\..\deps\libxml2\triodef.h" />
+    <ClInclude Include="..\..\deps\libxml2\trionan.h" />
+    <ClInclude Include="..\..\deps\libxml2\triop.h" />
+    <ClInclude Include="..\..\deps\libxml2\triostr.h" />
+    <ClInclude Include="..\..\deps\libxml2\xzlib.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

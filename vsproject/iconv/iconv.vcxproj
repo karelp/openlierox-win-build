@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CF537577-1A9F-4435-8597-CEAD62138A49}</ProjectGuid>
+    <RootNamespace>iconv</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir);../../deps/iconv/windows;../../deps/iconv/srclib</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBICONV;BUILDING_LIBCHARSET;LIBDIR=".";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ForcedIncludeFiles>config.h</ForcedIncludeFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>@echo off
+echo **************************************
+echo *          Compiling ICONV           *
+echo **************************************</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir);../../deps/iconv/windows;../../deps/iconv/srclib</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBICONV;BUILDING_LIBCHARSET;LIBDIR=".";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ForcedIncludeFiles>config.h</ForcedIncludeFiles>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>@echo off
+echo **************************************
+echo *          Compiling ICONV           *
+echo **************************************</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\deps\iconv\libcharset\lib\relocatable.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\aliases.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\aliases2.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\aliases_aix.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\aliases_aix_sysaix.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\aliases_dos.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\aliases_extra.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\aliases_osf1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\aliases_osf1_sysosf1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\aliases_sysaix.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\aliases_syshpux.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\aliases_sysosf1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\aliases_syssolaris.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\armscii_8.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ascii.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\atarist.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\big5.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\big5hkscs1999.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\big5hkscs2001.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\big5hkscs2004.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\big5hkscs2008.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\big5_2003.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\c99.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_aix.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_aix_sysaix.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_dos.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_extra.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_local.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_local_sysaix.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_local_syshpux.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_local_sysosf1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_local_syssolaris.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_osf1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_osf1_sysosf1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_sysaix.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_syshpux.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_sysosf1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\canonical_syssolaris.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ces_big5.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ces_gbk.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cjk_variants.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cns11643.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cns11643_1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cns11643_15.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cns11643_2.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cns11643_3.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cns11643_4.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cns11643_4a.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cns11643_4b.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cns11643_5.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cns11643_6.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cns11643_7.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cns11643_inv.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\converters.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1046.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1124.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1125.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1129.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1131.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1133.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1161.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1162.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1163.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1250.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1251.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1252.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1253.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1254.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1255.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1256.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1257.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp1258.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp437.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp737.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp775.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp850.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp852.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp853.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp855.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp856.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp857.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp858.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp860.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp861.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp862.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp863.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp864.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp865.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp866.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp869.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp874.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp922.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp932.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp932ext.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp936.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp936ext.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp943.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp949.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp950.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\cp950ext.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\dec_hanyu.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\dec_kanji.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\euc_cn.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\euc_jisx0213.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\euc_jp.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\euc_kr.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\euc_tw.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\flags.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\flushwc.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\gb12345.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\gb12345ext.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\gb18030.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\gb18030ext.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\gb18030uni.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\gb2312.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\gbk.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\gbkext1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\gbkext2.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\gbkext_inv.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\georgian_academy.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\georgian_ps.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\hkscs1999.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\hkscs2001.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\hkscs2004.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\hkscs2008.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\hp_roman8.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\hz.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iconv_open1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iconv_open2.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso2022_cn.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso2022_cnext.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso2022_jp.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso2022_jp1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso2022_jp2.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso2022_jp3.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso2022_kr.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso646_cn.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso646_jp.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_10.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_11.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_13.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_14.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_15.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_16.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_2.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_3.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_4.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_5.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_6.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_7.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_8.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\iso8859_9.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\isoir165.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\isoir165ext.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\java.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\jisx0201.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\jisx0208.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\jisx0212.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\jisx0213.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\johab.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\johab_hangul.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\koi8_r.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\koi8_ru.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\koi8_t.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\koi8_u.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ksc5601.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\loops.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\loop_unicode.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\loop_wchar.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mac_arabic.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mac_centraleurope.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mac_croatian.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mac_cyrillic.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mac_greek.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mac_hebrew.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mac_iceland.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mac_roman.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mac_romania.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mac_thai.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mac_turkish.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mac_ukraine.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\mulelao.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\nextstep.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\pt154.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\relocatable.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\riscos1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\rk1048.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\shift_jisx0213.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\sjis.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\tcvn.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\tds565.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\tis620.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\translit.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ucs2.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ucs2be.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ucs2internal.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ucs2le.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ucs2swapped.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ucs4.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ucs4be.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ucs4internal.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ucs4le.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\ucs4swapped.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\uhc_1.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\uhc_2.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\utf16.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\utf16be.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\utf16le.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\utf32.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\utf32be.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\utf32le.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\utf7.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\utf8.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\vietcomb.h" />
+    <ClInclude Include="..\..\deps\iconv\lib\viscii.h" />
+    <ClInclude Include="config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\deps\iconv\libcharset\lib\localcharset.c" />
+    <ClCompile Include="..\..\deps\iconv\lib\iconv.c" />
+    <ClCompile Include="..\..\deps\iconv\lib\relocatable.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B03F010F-9ED7-43EF-B90C-4C6EB0DE0643}</ProjectGuid>
+    <RootNamespace>libgd</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../deps/libgd;../../deps/libpng;../../deps/libjpeg;../../deps/freetype/include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;BGDWIN32;NONDLL;HAVE_LIBPNG;HAVE_LIBJPEG;HAVE_LIBFREETYPE;HAVE_FT2BUILD_H;M_PI=3.141592f;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>@echo off
+echo **************************************
+echo *          Compiling LIBGD           *
+echo **************************************</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../../deps/libgd;../../deps/libpng;../../deps/libjpeg;../../deps/freetype/include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;BGDWIN32;NONDLL;HAVE_LIBPNG;HAVE_LIBJPEG;HAVE_LIBFREETYPE;HAVE_FT2BUILD_H;M_PI=3.141592f;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>@echo off
+echo **************************************
+echo *          Compiling LIBGD           *
+echo **************************************</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\deps\libgd\gd.c" />
+    <ClCompile Include="..\..\deps\libgd\gdcache.c" />
+    <ClCompile Include="..\..\deps\libgd\gdfonta.c" />
+    <ClCompile Include="..\..\deps\libgd\gdfontg.c" />
+    <ClCompile Include="..\..\deps\libgd\gdfontl.c" />
+    <ClCompile Include="..\..\deps\libgd\gdfontmb.c" />
+    <ClCompile Include="..\..\deps\libgd\gdfonts.c" />
+    <ClCompile Include="..\..\deps\libgd\gdfontt.c" />
+    <ClCompile Include="..\..\deps\libgd\gdft.c" />
+    <ClCompile Include="..\..\deps\libgd\gdfx.c" />
+    <ClCompile Include="..\..\deps\libgd\gdhelpers.c" />
+    <ClCompile Include="..\..\deps\libgd\gdkanji.c" />
+    <ClCompile Include="..\..\deps\libgd\gdtables.c" />
+    <ClCompile Include="..\..\deps\libgd\gdttf.c" />
+    <ClCompile Include="..\..\deps\libgd\gdxpm.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_arc_f.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\libgd\gd_arc_f_buggy.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_gd.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_gd2.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_gif_in.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_gif_out.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_io.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_io_dp.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_io_file.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_io_ss.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_jpeg.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_lzw_out.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_png.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_security.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_ss.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_topal.c" />
+    <ClCompile Include="..\..\deps\libgd\gd_wbmp.c" />
+    <ClCompile Include="..\..\deps\libgd\io.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\libgd\io_dp.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\libgd\io_file.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\libgd\io_ss.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\libgd\mtables.c" />
+    <ClCompile Include="..\..\deps\libgd\wbmp.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\deps\libgd\entities.h" />
+    <ClInclude Include="..\..\deps\libgd\gd.h" />
+    <ClInclude Include="..\..\deps\libgd\gdcache.h" />
+    <ClInclude Include="..\..\deps\libgd\gdfonta.h" />
+    <ClInclude Include="..\..\deps\libgd\gdfontg.h" />
+    <ClInclude Include="..\..\deps\libgd\gdfontl.h" />
+    <ClInclude Include="..\..\deps\libgd\gdfontmb.h" />
+    <ClInclude Include="..\..\deps\libgd\gdfonts.h" />
+    <ClInclude Include="..\..\deps\libgd\gdfontt.h" />
+    <ClInclude Include="..\..\deps\libgd\gdfx.h" />
+    <ClInclude Include="..\..\deps\libgd\gdhelpers.h" />
+    <ClInclude Include="..\..\deps\libgd\gd_io.h" />
+    <ClInclude Include="..\..\deps\libgd\io.h" />
+    <ClInclude Include="..\..\deps\libgd\jisx0208.h" />
+    <ClInclude Include="..\..\deps\libgd\wbmp.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

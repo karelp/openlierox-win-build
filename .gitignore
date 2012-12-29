@@ -1,0 +1,8 @@
+/vsproject/Debug/*
+/vsproject/Release/*
+/vsproject/*/Debug/*
+/vsproject/*/Release/*
+*.user
+*.suo
+*.sdf
+*.opensdf

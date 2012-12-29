@@ -1,0 +1,1353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Breakpad">
+      <UniqueIdentifier>{8d98024e-1f82-450e-9287-3221028d6a61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Deprecated GUI">
+      <UniqueIdentifier>{a4edf720-59fb-486b-93ff-0b364ba81eae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Core">
+      <UniqueIdentifier>{f9680ecf-6e0a-475d-8b41-8e9763c8bde9}</UniqueIdentifier>
+      <Extensions>cpp, h</Extensions>
+    </Filter>
+    <Filter Include="Game files">
+      <UniqueIdentifier>{b9702d7d-339e-495f-a5d1-8adf3efeb3ed}</UniqueIdentifier>
+      <Extensions>cpp; h</Extensions>
+    </Filter>
+    <Filter Include="Game files\Game Modes">
+      <UniqueIdentifier>{e6b35394-da96-40ae-9c2a-74251585aca5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gusanos">
+      <UniqueIdentifier>{4ded50b2-c703-4714-93e1-3fd626be4f77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gusanos\blitters">
+      <UniqueIdentifier>{edbb4788-15a6-4578-bdf6-85aae5c15547}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gusanos\console">
+      <UniqueIdentifier>{a3152325-ef3d-40ef-a3f1-c2bb3ac2b36f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gusanos\gui">
+      <UniqueIdentifier>{78ea8279-f1d1-4be4-a8aa-fe25d3b984d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gusanos\gui\detail">
+      <UniqueIdentifier>{9e075422-c9b8-45b9-b002-9f4b54c4c1ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gusanos\gui\lua">
+      <UniqueIdentifier>{c050f9c8-029f-4f38-994b-c146fd2e25f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gusanos\loaders">
+      <UniqueIdentifier>{c1e12046-5483-4c8d-b713-bd40c9757181}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gusanos\lua">
+      <UniqueIdentifier>{fbb6173e-cd84-4464-afb4-1a21d7068527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gusanos\omfgscript">
+      <UniqueIdentifier>{bde557b7-e046-4a7c-ab05-65bb70a945b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="New GUI">
+      <UniqueIdentifier>{e7ec9a07-24b7-416f-9206-4399714ef5f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{8ab44476-12d4-4c56-b1db-40c040f2632a}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+    </Filter>
+    <Filter Include="System Files">
+      <UniqueIdentifier>{ef34d036-22f6-4b06-b91a-547c2116d283}</UniqueIdentifier>
+      <Extensions>cpp, h</Extensions>
+    </Filter>
+    <Filter Include="System Files\GusanosUtil">
+      <UniqueIdentifier>{cf1c7635-f1a5-4d05-a8fd-0221c0bf23c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System Files\Sound">
+      <UniqueIdentifier>{e692cd5b-37fe-4774-98f6-9521f22451a1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\openlierox\include\Autocompletion.h" />
+    <ClInclude Include="..\openlierox\include\AuxLib.h" />
+    <ClInclude Include="..\openlierox\include\Cache.h" />
+    <ClInclude Include="..\openlierox\include\CBytestream.h" />
+    <ClInclude Include="..\openlierox\include\CChannel.h" />
+    <ClInclude Include="..\openlierox\include\CFont.h" />
+    <ClInclude Include="..\openlierox\include\CInput.h" />
+    <ClInclude Include="..\openlierox\include\Clipboard.h" />
+    <ClInclude Include="..\openlierox\include\Color.h" />
+    <ClInclude Include="..\openlierox\include\Condition.h" />
+    <ClInclude Include="..\openlierox\include\ConversationLogger.h" />
+    <ClInclude Include="..\openlierox\include\CssParser.h" />
+    <ClInclude Include="..\openlierox\include\CsvReader.h" />
+    <ClInclude Include="..\openlierox\include\Cursor.h" />
+    <ClInclude Include="..\openlierox\include\CVec.h" />
+    <ClInclude Include="..\openlierox\include\Debug.h" />
+    <ClInclude Include="..\openlierox\include\DynDraw.h" />
+    <ClInclude Include="..\openlierox\include\Error.h" />
+    <ClInclude Include="..\openlierox\include\EventQueue.h" />
+    <ClInclude Include="..\openlierox\include\FastVector.h" />
+    <ClInclude Include="..\openlierox\include\FindFile.h" />
+    <ClInclude Include="..\openlierox\include\GeoIPDatabase.h" />
+    <ClInclude Include="..\openlierox\include\Geometry.h" />
+    <ClInclude Include="..\openlierox\include\GfxPrimitives.h" />
+    <ClInclude Include="..\openlierox\include\IniReader.h" />
+    <ClInclude Include="..\openlierox\include\InputEvents.h" />
+    <ClInclude Include="..\openlierox\include\IpToCountryDB.h" />
+    <ClInclude Include="..\openlierox\include\IRC.h" />
+    <ClInclude Include="..\openlierox\include\MathLib.h" />
+    <ClInclude Include="..\openlierox\include\Music.h" />
+    <ClInclude Include="..\openlierox\include\Mutex.h" />
+    <ClInclude Include="..\openlierox\include\NewNetEngine.h" />
+    <ClInclude Include="..\openlierox\include\PixelFunctors.h" />
+    <ClInclude Include="..\openlierox\include\Process.h" />
+    <ClInclude Include="..\openlierox\include\RandomNumberList.h" />
+    <ClInclude Include="..\openlierox\include\ReadWriteLock.h" />
+    <ClInclude Include="..\openlierox\include\sex.h" />
+    <ClInclude Include="..\openlierox\include\SmartPointer.h" />
+    <ClInclude Include="..\openlierox\include\StackWalker.h" />
+    <ClInclude Include="..\openlierox\include\StringBuf.h" />
+    <ClInclude Include="..\openlierox\include\StringUtils.h" />
+    <ClInclude Include="..\openlierox\include\StyleVar.h" />
+    <ClInclude Include="..\openlierox\include\TaskManager.h" />
+    <ClInclude Include="..\openlierox\include\ThreadPool.h" />
+    <ClInclude Include="..\openlierox\include\ThreadVar.h" />
+    <ClInclude Include="..\openlierox\include\Timer.h" />
+    <ClInclude Include="..\openlierox\include\types.h" />
+    <ClInclude Include="..\openlierox\include\UCString.h" />
+    <ClInclude Include="..\openlierox\include\Unicode.h" />
+    <ClInclude Include="..\openlierox\include\win32memleakdebug.h" />
+    <ClInclude Include="..\openlierox\include\XMLutils.h" />
+    <ClInclude Include="..\openlierox\src\cfg\client.h" />
+    <ClInclude Include="..\openlierox\src\client\ClientConnectionRequestInfo.h" />
+    <ClInclude Include="..\openlierox\src\client\gfx\raytracing.h" />
+    <ClInclude Include="..\openlierox\src\client\StdinCLISupport.h" />
+    <ClInclude Include="..\openlierox\src\common\MapLoader_common.h" />
+    <ClInclude Include="..\openlierox\src\game\Attr.h" />
+    <ClInclude Include="..\openlierox\src\game\CGameObject.h" />
+    <ClInclude Include="..\openlierox\src\game\ClassInfo.h" />
+    <ClInclude Include="..\openlierox\src\game\CMap.h" />
+    <ClInclude Include="..\openlierox\src\game\CWorm.h" />
+    <ClInclude Include="..\openlierox\src\game\EngineSettings.h" />
+    <ClInclude Include="..\openlierox\src\game\GameMode.h" />
+    <ClInclude Include="..\openlierox\src\game\GameState.h" />
+    <ClInclude Include="..\openlierox\src\game\ServerList.h" />
+    <ClInclude Include="..\openlierox\src\game\Settings.h" />
+    <ClInclude Include="..\openlierox\src\game\SettingsPreset.h" />
+    <ClInclude Include="..\openlierox\src\game\Sounds.h" />
+    <ClInclude Include="..\openlierox\src\gui\List.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\luaapi\classes.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\luaapi\context.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\luaapi\macros.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\luaapi\types.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\LuaCallbacks.h" />
+    <ClInclude Include="..\openlierox\src\MainLoop.h" />
+    <ClInclude Include="..\openlierox\src\sound\sfx.h" />
+    <ClInclude Include="..\openlierox\src\sound\sfxdriver.h" />
+    <ClInclude Include="..\openlierox\src\sound\sfxdriver_openal.h" />
+    <ClInclude Include="..\openlierox\src\sound\SoundsBase.h" />
+    <ClInclude Include="..\openlierox\src\sound\sound_sample.h" />
+    <ClInclude Include="..\openlierox\src\sound\sound_sample_openal.h" />
+    <ClInclude Include="..\openlierox\src\util\angle.h" />
+    <ClInclude Include="..\openlierox\src\util\BaseObject.h" />
+    <ClInclude Include="..\openlierox\src\util\bitarray.h" />
+    <ClInclude Include="..\openlierox\src\util\Bitstream.h" />
+    <ClInclude Include="..\openlierox\src\util\common.h" />
+    <ClInclude Include="..\openlierox\src\util\compare.h" />
+    <ClInclude Include="..\openlierox\src\util\CustomVar.h" />
+    <ClInclude Include="..\openlierox\src\util\FixedPointNumber.h" />
+    <ClInclude Include="..\openlierox\src\util\GusCache.h" />
+    <ClInclude Include="..\openlierox\src\util\IPrintOutFct.h" />
+    <ClInclude Include="..\openlierox\src\util\List.h" />
+    <ClInclude Include="..\openlierox\src\util\log.h" />
+    <ClInclude Include="..\openlierox\src\util\macros.h" />
+    <ClInclude Include="..\openlierox\src\util\math_func.h" />
+    <ClInclude Include="..\openlierox\src\util\PODForClass.h" />
+    <ClInclude Include="..\openlierox\src\util\Random.h" />
+    <ClInclude Include="..\openlierox\src\util\rect.h" />
+    <ClInclude Include="..\openlierox\src\util\Result.h" />
+    <ClInclude Include="..\openlierox\src\util\StaticVar.h" />
+    <ClInclude Include="..\openlierox\src\util\stringbuild.h" />
+    <ClInclude Include="..\openlierox\src\util\StringConv.h" />
+    <ClInclude Include="..\openlierox\src\util\text.h" />
+    <ClInclude Include="..\openlierox\src\util\trace.h" />
+    <ClInclude Include="..\openlierox\include\CBanList.h" />
+    <ClInclude Include="..\openlierox\include\CBonus.h" />
+    <ClInclude Include="..\openlierox\include\CChatBox.h" />
+    <ClInclude Include="..\openlierox\include\CClient.h" />
+    <ClInclude Include="..\openlierox\include\CGameScript.h" />
+    <ClInclude Include="..\openlierox\include\CGameSkin.h" />
+    <ClInclude Include="..\openlierox\include\ChatCommand.h" />
+    <ClInclude Include="..\openlierox\include\CMap.h" />
+    <ClInclude Include="..\openlierox\include\CNinjaRope.h" />
+    <ClInclude Include="..\openlierox\include\CProjectile.h" />
+    <ClInclude Include="..\openlierox\include\CServer.h" />
+    <ClInclude Include="..\openlierox\include\CShootList.h" />
+    <ClInclude Include="..\openlierox\include\CViewport.h" />
+    <ClInclude Include="..\openlierox\include\CWeather.h" />
+    <ClInclude Include="..\openlierox\include\CWorm.h" />
+    <ClInclude Include="..\openlierox\include\CWormBot.h" />
+    <ClInclude Include="..\openlierox\include\CWpnRest.h" />
+    <ClInclude Include="..\openlierox\include\DedicatedControl.h" />
+    <ClInclude Include="..\openlierox\include\Entity.h" />
+    <ClInclude Include="..\openlierox\include\FlagInfo.h" />
+    <ClInclude Include="..\openlierox\src\game\Game.h" />
+    <ClInclude Include="..\openlierox\src\game\Level.h" />
+    <ClInclude Include="..\openlierox\src\game\Mod.h" />
+    <ClInclude Include="..\openlierox\include\Physics.h" />
+    <ClInclude Include="..\openlierox\include\PhysicsLX56.h" />
+    <ClInclude Include="..\openlierox\include\ProfileSystem.h" />
+    <ClInclude Include="..\openlierox\include\ProjAction.h" />
+    <ClInclude Include="..\openlierox\include\Protocol.h" />
+    <ClInclude Include="..\openlierox\src\game\SinglePlayer.h" />
+    <ClInclude Include="..\openlierox\src\game\WormInputHandler.h" />
+    <ClInclude Include="..\openlierox\include\CGameMode.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CAnimation.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CBar.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CBox.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CBrowser.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CButton.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CChatWidget.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CCheckbox.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CCombobox.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CGuiLayout.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CGuiSkin.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CGuiSkinnedLayout.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CImage.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CInputBox.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CLabel.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CLine.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CListview.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CMenu.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CProgressbar.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CScrollbar.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CSlider.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CTextbox.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CTextButton.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CTitleButton.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CWidget.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\CWidgetList.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\Graphics.h" />
+    <ClInclude Include="..\openlierox\include\DeprecatedGUI\Menu.h" />
+    <ClInclude Include="..\openlierox\src\util\VecTimeRecorder.h" />
+    <ClInclude Include="..\openlierox\src\util\WeakRef.h" />
+    <ClInclude Include="..\openlierox\include\con_cmd.h" />
+    <ClInclude Include="..\openlierox\include\Console.h" />
+    <ClInclude Include="..\openlierox\include\CScriptableVars.h" />
+    <ClInclude Include="..\openlierox\include\FeatureList.h" />
+    <ClInclude Include="..\openlierox\include\FileDownload.h" />
+    <ClInclude Include="..\openlierox\include\HTTP.h" />
+    <ClInclude Include="..\openlierox\include\LieroX.h" />
+    <ClInclude Include="..\openlierox\include\Networking.h" />
+    <ClInclude Include="..\openlierox\include\Options.h" />
+    <ClInclude Include="..\openlierox\include\UploadSpeedTest.h" />
+    <ClInclude Include="..\openlierox\include\Utils.h" />
+    <ClInclude Include="..\openlierox\include\Version.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CAnimation.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CBackground.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CBar.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CBorder.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CBox.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CBrowser.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CButton.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CCheckbox.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CCombobox.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CDialog.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CGuiSkin.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CGuiSkinnedLayout.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CImage.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CImageButton.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CInputBox.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CItem.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CLabel.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CLine.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CListview.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CMapEditor.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CMarquee.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CMenu.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CMinimap.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CommonDialogs.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CProgressbar.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CScrollbar.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CSlider.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CTabControl.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CTextbox.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CTextButton.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CTitleButton.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CToggleButton.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CWidget.h" />
+    <ClInclude Include="..\openlierox\include\SkinnedGUI\CWidgetEffect.h" />
+    <ClInclude Include="..\openlierox\include\FontHandling.h" />
+    <ClInclude Include="..\openlierox\include\GuiPrimitives.h" />
+    <ClInclude Include="..\openlierox\src\breakpad\BreakPad.h" />
+    <ClInclude Include="..\openlierox\src\breakpad\BreakpadDllExportMacro.h" />
+    <ClInclude Include="..\openlierox\src\breakpad\config.h" />
+    <ClInclude Include="..\openlierox\src\breakpad\DumpSyms.h" />
+    <ClInclude Include="..\openlierox\src\breakpad\ExtractInfo.h" />
+    <ClInclude Include="..\openlierox\src\breakpad\on_demand_symbol_supplier.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\2xsai.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\allegro.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\animators.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\base_action.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\base_animator.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\client.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\culling.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\detect_event.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\distortion.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\encoding.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\events.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\exp_type.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\explosion.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\font.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\game_actions.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gconsole.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gfx.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\glua.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gusanos.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gusgame.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\hash_table.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\level.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\level_effect.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\material.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\menu.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\message_queue.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\net_worm.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\netstream.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\network.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\ninjarope.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\noise_line.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\object_grid.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\objects_list.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\parser.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\part_type.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\particle.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\player_input.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\posspd_replicator.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\proxy_player.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\resource_base.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\resource_list.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\resource_locator.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\script.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\server.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\simple_particle.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\sound.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\sprite.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\sprite_set.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\stl_str_replicator.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\timer_event.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\vector_replicator.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\weapon.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\weapon_type.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\blitters\blitters.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\blitters\colors.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\blitters\context.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\blitters\macros.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\blitters\mmx.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\blitters\types.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\alias.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\command.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\console-grammar.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\console.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\consoleitem.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\special_command.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\console\variables.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\omfggui.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\omfggui_windows.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\button.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\check.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\context.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\edit.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\group.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\gss-grammar.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\label.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\list.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\llist.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\renderer.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\wnd.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\xml-grammar.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\detail\xml.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\gui\lua\bindings-gui.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\loaders\liero.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\loaders\losp.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\loaders\vermes.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings-game.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings-gfx.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings-math.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings-network.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings-objects.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings-resources.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\lua\bindings.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\omfgscript\omfg_script.h" />
+    <ClInclude Include="..\openlierox\src\gusanos\omfgscript\omfg_script_parser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\openlierox\src\cfg\client.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\AuxLib.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\Cache.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\ClientConnectionRequestInfo.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CLabel.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\gfx\raytracing.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\PixelFunctors.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\StdinCLISupport.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CBytestream.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CChannel.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CFont.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CInput.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\Clipboard.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\ConfigHandler.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\ConversationLogger.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CssParser.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\Cursor.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Debug.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DynDraw.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\Error.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Debug_AmIBeingDebugged.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Debug_DumpCallstack.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Debug_extended_backtrace.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Debug_GetCallstack.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Debug_GetPCFromUContext.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Debug_RaiseDebugger.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Debug_WriteCoreDump.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\EventQueue.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\FindFile.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\GeoIPDatabase.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Geometry.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\GfxPrimitives.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\GfxSaveSurface.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\GfxUtils.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\IniReader.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\InputEvents.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\IpToCountryDB.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\IRC.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\MapLoader_CommanderKeen123.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\MapLoader_Gusanos.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\MapLoader_LieroX.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\MapLoader_OrigLiero.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\MapLoader_Teeworlds.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\MathLib.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\Music.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\memstats.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Mutex.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\NewNetEngine.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\NotifyUser.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\OpenExternBrowser.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Process.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\sex.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\SmartPointer.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\SMTP.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\StackWalker.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\StringBuf.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\StringUtils.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\SystemFunctions.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\TaskManager.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\TeeStdoutHandler.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\ThreadPool.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Timer.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Unicode.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\XMLutils.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\Attr.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\ClassInfo.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\GameMode.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\GameState.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\Game_loadMap.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\Game_loadMod.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\Game_loadWeaponRestrictions.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\ServerList.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\Settings.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\SettingsPreset.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\Sounds.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gui\List.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\luaapi\context.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\LuaCallbacks.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\MainLoop.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\sound\sfx.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\sound\sfxdriver.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\sound\sfxdriver_openal.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\sound\Sounds.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\sound\sound_sample_openal.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\util\angle.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\util\BaseObject.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\util\Bitstream.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\util\CustomVar.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\util\List.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\util\log.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\util\math_func.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\util\StringConv.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\util\text.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CBanList.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CBonus.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CChatBox.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CClient.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CClient_Draw.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CClient_Game.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CClient_Parse.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CClient_Send.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CGameObject.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CGameScript.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CGameSkin.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\ChatCommand.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CMap.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CNinjaRope.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CProjectile.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CServer.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CServer_Game.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CServer_Parse.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CServer_Send.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CServerConnection.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CShootList.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CViewport.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CWeather.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CWorm.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CWorm_SendRecv.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CWormBot.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CWormHuman.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CWpnRest.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\DedicatedControl.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\Entity.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\FlagInfo.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\Game.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\Level.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\MapLoader.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\Mod.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Physics.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\PhysicsLX56.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\PhysicsLX56_Projectiles.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\ProfileSystem.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\SinglePlayer.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\game\WormInputHandler.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CaptureTheFlag.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CDeathMatch.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CDemolitionsMatch.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CGameMode.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CHideAndSeek.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CRace.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CTag.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\server\CTeamDeathMatch.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CAnimation.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CBar.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CBox.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CBrowser.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CButton.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CChatWidget.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CCheckbox.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CCombobox.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CGuiLayout.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CGuiSkin.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CGuiSkinnedLayout.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CImage.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CInputBox.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CListview.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CMenu.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CScrollbar.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CSlider.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CTextbox.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CTextButton.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CTitleButton.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CWidget.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\CWidgetList.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Graphics.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_FloatingOptions.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Local.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Main.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Mapeditor.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Chat.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Favourites.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Host.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Internet.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Join.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Lan.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_Main.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Net_News.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Options.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_Player.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\Menu_SpeedTest.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\DeprecatedGUI\MenuSystem.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Command.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Console.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\CrashHandler.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\CScriptableVars.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\FeatureList.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\FileDownload.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\HTTP.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\main.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\MainGlobals.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Misc.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Networking.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\Options.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\UploadSpeedTest.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\common\Version.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CAnimation.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CBackground.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CBorder.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CButton.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CCheckbox.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CCombobox.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CDialog.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CGuiSkin.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CGuiSkinnedLayout.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CImage.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CImageButton.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CInputBox.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CItem.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CLabel.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CLine.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CListview.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CMapEditor.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CMarquee.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CMenu.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CMinimap.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CommonDialogs.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CProgressbar.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CScrollbar.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CSlider.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CTabControl.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CTextbox.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CToggleButton.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\SkinnedGUI\CWidget.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\FontHandling.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\client\GuiPrimitives.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\breakpad\BreakPad.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\breakpad\DumpSyms.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\breakpad\ExtractInfo.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\breakpad\on_demand_symbol_supplier.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\2xsai.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\allegro.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\animators.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\base_action.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\base_animator.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\base_worm.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\client.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\culling.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\detect_event.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\distortion.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\encoding.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\events.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\exp_type.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\explosion.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\font.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\game_actions.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gconsole.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gfx.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\glua.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gusanos.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gusgame.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\hash_table.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\level.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\level_effect.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\material.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\menu.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\net_worm.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\netstream.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\network.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\ninjarope.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\noise_line.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\object_grid.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\objects_list.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\parser.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\part_type.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\particle.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\player_input.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\posspd_replicator.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\proxy_player.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\resource_base.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\resource_list.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\resource_locator.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\script.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\server.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\simple_particle.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\sound.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\sprite.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\sprite_set.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\stl_str_replicator.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\timer_event.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\vector_replicator.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\viewport.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\weapon.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\weapon_type.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\blitters\add.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\blitters\add_simd.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\blitters\blend.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\blitters\blend_simd.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\blitters\mult.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\blitters\mult_simd.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\console\alias.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\console\command.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\console\console.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\console\consoleitem.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\console\special_command.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\console\variables.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\button.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\check.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\context.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\edit.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\group.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\gss.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\label.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\list.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\renderer.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\wnd.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\detail\xml.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\gui\lua\bindings-gui.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\loaders\liero.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\loaders\losp.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\loaders\vermes.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings-game.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings-gfx.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings-math.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings-network.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings-objects.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings-resources.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\lua\bindings.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\gusanos\omfgscript\omfg_script.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openlierox\src\util\VecTimeRecorder.cpp">
+      <Filter>Game files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\openlierox\share\OpenLieroX.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

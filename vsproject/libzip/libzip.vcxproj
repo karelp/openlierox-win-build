@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6621345A-B291-4425-8EAC-53626DD0A5FE}</ProjectGuid>
+    <RootNamespace>libzip</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir);../../deps/zlib;../../deps/libzip/lib</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4244;4018</DisableSpecificWarnings>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>@echo off
+echo **************************************
+echo *         Compiling LIBZIP           *
+echo **************************************</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir);../../deps/zlib;../../deps/libzip/lib</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4244;4018</DisableSpecificWarnings>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>@echo off
+echo **************************************
+echo *         Compiling LIBZIP           *
+echo **************************************</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\deps\libzip\lib\mkstemp.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_add.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_add_dir.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_close.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_delete.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_dirent.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_entry_free.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_entry_new.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_error.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_error_clear.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_error_get.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_error_get_sys_type.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_error_strerror.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_error_to_str.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_err_str.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_fclose.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_fdopen.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_filerange_crc.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_file_error_clear.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_file_error_get.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_file_get_offset.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_file_strerror.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_fopen.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_fopen_encrypted.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_fopen_index.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_fopen_index_encrypted.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_fread.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_free.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_get_archive_comment.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_get_archive_flag.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_get_compression_implementation.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_get_encryption_implementation.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_get_file_comment.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_get_file_extra.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_get_name.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_get_num_entries.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_get_num_files.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_memdup.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_name_locate.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_new.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_open.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_rename.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_replace.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_set_archive_comment.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_set_archive_flag.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_set_default_password.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_set_file_comment.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_set_file_extra.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_set_name.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_buffer.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_close.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_crc.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_deflate.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_error.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_file.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_filep.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_free.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_function.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_layered.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_open.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_pkware.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_pop.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_read.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_stat.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_source_zip.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_stat.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_stat_index.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_stat_init.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_strerror.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_unchange.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_unchange_all.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_unchange_archive.c" />
+    <ClCompile Include="..\..\deps\libzip\lib\zip_unchange_data.c" />
+    <ClCompile Include="..\..\deps\libzip\src\getopt.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\deps\libzip\lib\zip.h" />
+    <ClInclude Include="..\..\deps\libzip\lib\zipconf.h" />
+    <ClInclude Include="..\..\deps\libzip\lib\zipint.h" />
+    <ClInclude Include="..\..\deps\libzip\src\getopt.h" />
+    <ClInclude Include="config.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
